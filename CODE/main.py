@@ -11,8 +11,8 @@ The model is divided into four parts:
 params.py - Used to set constants or other model parameters.
 advect.py - Contains functions used for solving the equations, 
             including handling boundaries and the tendency term.
-util.py -   Contains plotting tools and functions to save variables.
-main.py -   The main program, where the initial field setup and 
+tools.py  - Contains plotting tools and functions to save variables.
+main.py   - The main program, where the initial field setup and 
             the main loop are executed. Running this file will 
             call the variables or functions from the other three files.
 """
@@ -64,6 +64,7 @@ for file in glob('./*.py'):
 # -----------------------------------------------------------------------------
 # fluid surface perturbation (m)
 eta_0 = np.zeros((ny, nx))
+eta_0 = 10*np.exp(-((xx-0)**2/(2*(200000)**2) + (yy-0)**2/(2*(200000)**2)))
 
 # x-component wind (m/s)
 u_0 = np.zeros((ny, nx))

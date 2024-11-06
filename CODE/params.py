@@ -18,7 +18,7 @@ nx = 200       # grid
 ny = 200       # grid
 dx = 50000     # x-direction gridsize (m)
 dy = 50000     # y-direction gridsize (m)
-nt = 15000     # total timesteps
+nt = 500       # total timesteps
 dt = 90        # time interval
 
 # setup x, y grids
@@ -35,8 +35,8 @@ D2y = 1/(2*dy)
 # =============================================================================
 # model configuration
 # =============================================================================
-nsave = 100             # time step
-nplot = 100             # time step
+nsave = 10             # time step
+nplot = 10             # time step
 add_coriolis = True
 add_topography = False
 add_heating = False
